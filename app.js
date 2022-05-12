@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
-//to pass the URL encoded body of incomming request as JSON data
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); //to pass the URL encoded body of incomming request as JSON data
+
+const mongoose = require('mongoose');
+
+const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.9hh7i.mongodb.net/test`;
+mongoose.connect(CONNECTION_URL);
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
