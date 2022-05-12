@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser'); //to pass the URL encoded body of incomming request as JSON data
 
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.9hh7i.mongodb.net/test`;
 mongoose.connect(CONNECTION_URL);
