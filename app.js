@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser'); //to pass the URL encoded body of incomming request as JSON data
 
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');//mongoose allow creating schema(js object) to define how the mongo db documents should look like
 const dotenv = require('dotenv');
 dotenv.config();
 
